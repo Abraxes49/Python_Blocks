@@ -3,27 +3,27 @@ import Player
 
 class Game:
     def __init__(self):
-        pygame.init()                                            
-        self.window_with = 800
+        pygame.init()
+        self.window_width = 800
         self.window_height = 600
-        self.window = pygame.display.set_mode((self.window_with, self.window_height))
+        self.window = pygame.display.set_mode((self.window_width, self.window_height))
         pygame.display.set_caption("Coin Collector")
         self.clock = pygame.time.Clock()
         self.player = Player.Player(self, 32, 32)           # ehm kann sein das das angeglichen werden soll
-        self.run()                                            # I enthäst hauploop vom spiel
+        self.run()
 
-    def run(self):                                            # II. Hauptloop
+    def run(self):
         running = True
         while running:
-            for event in pygame.event.get():                    #II. Lauf beziehnugsweiße bendden 
+            for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                     running = False
 
-        self.delta_time = self.clock .tick(60) / 1000        
-        self.window.fill((25,25,25))                        
-        self.player.update                                      # ggf angleichen
+        self.delta_time = self.clock.tick(60) / 1000
+        self.window.fill((25, 25, 25))
+        self.player.update()          #selbiges
         pygame.display.update()
 
     pygame.quit()
