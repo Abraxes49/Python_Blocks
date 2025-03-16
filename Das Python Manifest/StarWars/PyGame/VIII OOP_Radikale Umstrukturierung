@@ -9,7 +9,7 @@ class Game:
         self.window = pygame.display.set_mode((self.window_width, self.window_height))
         pygame.display.set_caption("Coin Collector")
         self.clock = pygame.time.Clock()
-        self.player = VIII_1_Player.VIII_1_Player(self, 64, 64)           
+        self.player = VIII_1_Player.Player(self, 64, 64)        # also das der Pdfad sozuasgen die klasse Player
         self.run()
 
     def run(self):
@@ -26,9 +26,8 @@ class Game:
             self.player.update()         #selbiges
             pygame.display.update()
 
-    pygame.quit()
+
 
 game = Game()
 
-
-
+pygame.quit()
