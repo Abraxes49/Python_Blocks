@@ -1,5 +1,5 @@
 import pygame
-import Player
+import VIII.1 Player
 
 class Game:
     def __init__(self):
@@ -9,7 +9,7 @@ class Game:
         self.window = pygame.display.set_mode((self.window_width, self.window_height))
         pygame.display.set_caption("Coin Collector")
         self.clock = pygame.time.Clock()
-        self.player = Player.Player(self, 64, 64)           # ehm kann sein das das angeglichen werden soll
+        self.player = VIII.1 Player.VIII.1 Player(self, 64, 64)           
         self.run()
 
     def run(self):
